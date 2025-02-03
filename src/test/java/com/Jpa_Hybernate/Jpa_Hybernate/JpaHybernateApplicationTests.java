@@ -34,7 +34,7 @@ class JpaHybernateApplicationTests {
 	@Test
 	void getRepository(){
 		List<ProductEntity> entities=productRepository
-				.findByQuantityAndPrice(18,BigDecimal.valueOf(565.55));
+				.findByTitleContainingIgnoreCase("Gooday Biscuits",null);
 		System.out.println(entities);
 	}
 	@Test
